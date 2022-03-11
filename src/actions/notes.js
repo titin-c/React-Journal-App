@@ -22,6 +22,7 @@ export const startNewNote = () => {
         newNote
       );
       dispatch( activeNote( doc.id, newNote ));
+      dispatch( addNewNote( doc.id, newNote ) );
       
       
     } catch (e) {
@@ -78,7 +79,7 @@ export const startSaveNote = ( note ) => {
       await updateDoc(noteRef,noteToFirestore);
 
       dispatch(refreshNote(note.id, noteToFirestore ));
-      dispatch( addNewNote( note.id, noteToFirestore ) );
+      
       Swal.fire('Saved', note.title, 'success');
       
       
