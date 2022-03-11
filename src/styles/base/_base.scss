@@ -6,7 +6,12 @@ html,body{
     height: 100%;
     width: 100%;
 }
-main{width: 100%;}
+main{width: 100%;
+    position: absolute;
+
+    z-index: 0;
+
+transition: all .3s ease;}
 
 .mt-10{margin-top: 10px;}
 .mt-5{margin-top: 20px;}

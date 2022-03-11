@@ -19,13 +19,7 @@ const { active } = useSelector( state => state.notes );
 
       <Sidebar />
       <main id="page-wrap">
-      <div
-        className='journal__sidebar-burguer-icon'
-      >
-        x
-        
-      </div>
-
+      
         {
           ( active )
             ? ( <NoteScreen /> )

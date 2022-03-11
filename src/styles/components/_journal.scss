@@ -14,9 +14,10 @@ height:100%;
     flex-direction: column;
     height: 100vh;
     transition: width .3s cubic-bezier(0.4, 0, 0.2, 1);
-    width: 256px;
+    width: $sidebarWidth;
     color: #fff;
     position: relative;
+    z-index: 1;
 
     transition: all .3s ease;
 }
@@ -26,6 +27,18 @@ height:100%;
 .journal__sidebar.open {
     left:0px
 }
+.journal__sidebar.closed + main{
+left: 0;
+right: 0;
+position: absolute;
+    
+}
+.journal__sidebar.open + main{
+    left: $sidebarWidth;
+    right: 0;
+    width: calc(100% - 256px );
+        
+    }
 .journal__sidebar-navbar{
     display: flex !important;
     justify-content: space-between;
@@ -34,8 +47,26 @@ height:100%;
 .journal__sidebar-burguer-icon {
     position: absolute;
     right: -40px;
-    top: 0px;
+    top: 9px;
     color: #051e34;
+
+    transition: all .3s ease;
+}
+.closed .journal__sidebar-burguer-icon {
+    background: $secondary;
+    color: #fff;
+    border-radius: 6px;
+    padding: 0;
+}
+.open .journal__sidebar-burguer-icon {
+
+    color: $secondary;
+}
+.journal__sidebar-burguer-icon svg{
+    opacity:1;
+    margin: 0;
+    padding: 0;
+    margin-bottom: -4px;
 }
 .journal__sidebar-navbar .btn{color:#fff}
 .journal__sidebar-navbar h3{
