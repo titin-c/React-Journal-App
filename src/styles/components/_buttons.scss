@@ -1,0 +1,139 @@
+.btn{
+    background: transparent;
+    border:none;
+    cursor:pointer;
+    font-size: 12px;
+    padding: 7px 20px;
+    border-radius: 100px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    transition: all .3s ease;
+
+    &:focus{
+        outline: none;
+    }
+    &:hover{
+        color:#fff;
+        background-color:lighten($color: $primary, $amount: 10);
+    }
+}
+
+.btn-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 5px;
+}
+.btn-primary{
+
+    background-color: lighten($color: $primary, $amount: 15);
+    border:solid 1px primary;
+    color: #fff;
+    cursor:pointer;
+
+    transition: all .3s ease;
+
+    &:disabled{
+        background-color: lighten($color: $primary, $amount: 25);
+        cursor:not-allowed;
+    }
+    &:hover{
+        background-color: lighten($color: $primary, $amount: 25);
+    }
+}
+.btn-secondary{
+    background-color: $secondary;
+    border:solid 1px $primary;
+    color: $primary;
+    cursor:pointer;
+
+    transition: all .3s ease;
+
+    &:disabled{
+        background-color: lighten($color: $secondary, $amount: 25);
+        color: darken($color: $secondary, $amount: 10);
+        cursor:not-allowed;
+    }
+    &:hover{
+        background-color: lighten($color: $secondary, $amount: 10);
+        color: darken($color: $secondary, $amount: 50);
+    }
+}
+.btn-outline{
+    border:solid 1px $primary;
+    color: $primary;
+    cursor:pointer;
+
+    transition: all .3s ease;
+
+    &:hover{
+        border-color: lighten($color: $primary, $amount: 25);
+        color: $primary;
+        background-color: lighten($color: $primary, $amount: 80);
+    }
+}
+
+.btn-block{
+    display: block !important;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+}
+.btn-delete{
+    border:solid 1px $danger;
+    color: $danger;
+    cursor:pointer;
+    
+
+    transition: all .3s ease;
+
+    &:hover{
+        border-color: $danger;
+        color: #fff;
+        background-color: lighten($color: $danger, $amount: 10);
+    }
+
+}
+.google-btn {
+    cursor: pointer;
+    margin-top: 5px;
+    width: 100%;
+    height: 32px;
+    background-color: $google-blue;
+    border-radius: 2px;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+
+    transition: box-shadow .3s ease;
+
+    .google-icon-wrapper {
+        position: absolute;
+        margin-top: 1px;
+        margin-left: 1px;
+        width: 30px;
+        height: 30px;
+        border-radius: 2px;
+        background-color: #fff;
+    }
+    .google-icon {
+        position: absolute;
+        margin-top: 7px;
+        margin-left: 6px;
+        width: 18px;
+        height: 18px;
+    }
+    .btn-text {
+        float: right;
+        margin: 8px 40px 0 0;
+        color: #fff;
+        font-size: 14px;
+        letter-spacing: 0.2px;
+    }
+    &:hover {
+        box-shadow: 0 0 6px $google-blue;
+    }
+    &:active {
+        background: $button-active-blue;
+    }
+}
+//.google-btn

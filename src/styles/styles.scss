@@ -1,0 +1,13 @@
+@import './base/base';
+@import './base/settings';
+
+//Components
+@import './components/auth';
+@import './components/buttons';
+@import './components/links';
+@import './components/journal';
+@import './components/nothing';
+@import './components/notes';
+
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;600&display=swap');

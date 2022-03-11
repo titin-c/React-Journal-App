@@ -1,0 +1,11 @@
+.link{
+     color:lighten($color: $terciary, $amount: 25);
+     font-size:14px;
+     letter-spacing: 1px;
+     
+
+     &:hover{
+         color:#fff;
+         text-decoration:none;
+     }
+}
