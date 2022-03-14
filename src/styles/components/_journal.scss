@@ -9,7 +9,7 @@ height:100%;
     background-image: url(//www.gstatic.com/mobilesdk/190424_mobilesdk/nav_nachos@2x.png);
     background-position: left 0 bottom 0;
     background-repeat: no-repeat;
-    background-size: 256px 556px;
+    background-size: #{$sidebarWidth} 556px;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -22,7 +22,7 @@ height:100%;
     transition: all .3s ease;
 }
 .journal__sidebar.closed {
-    left:-256px
+    left:calc(0px - #{$sidebarWidth});
 }
 .journal__sidebar.open {
     left:0px
@@ -36,7 +36,7 @@ position: absolute;
 .journal__sidebar.open + main{
     left: $sidebarWidth;
     right: 0;
-    width: calc(100% - 256px );
+    width: calc(100% - #{$sidebarWidth} );
         
     }
 .journal__sidebar-navbar{
@@ -49,6 +49,7 @@ position: absolute;
     right: -40px;
     top: 9px;
     color: #051e34;
+    cursor: pointer;
 
     transition: all .3s ease;
 }
@@ -172,7 +173,7 @@ position: absolute;
     text-overflow: ellipsis;
 }
 .journal__entry-date-box{
-    min-width:  25px;
+    min-width:  45px;
 
     align-items: center;
     display: flex;
@@ -191,3 +192,27 @@ position: absolute;
     padding: 0;
 }
 svg{opacity:.6;}
+
+@media (max-width: 800px) {
+    .journal__sidebar.open + main {
+        left: 0px;
+        right: 0;
+        width: 100%;
+    }
+
+    .notes__appbar {
+       
+        justify-content: flex-end !important;
+        flex-wrap: wrap;
+        align-content: flex-end;
+        row-gap: 10px;
+        gap: 10px;
+    }
+    .open .journal__sidebar-burguer-icon {
+        background: #fff;
+        color: $secondary;
+        border-radius: 6px;
+        padding: 0;
+    }
+
+  }

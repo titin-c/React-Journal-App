@@ -40,8 +40,8 @@ export const Sidebar = () => {
         onClick={() => setIsOpen(!isOpen)}
       >{
         isOpen 
-          ? (<Icon path={mdiWindowClose} title="User" size={1.5} />) 
-          : (<Icon path={mdiMenu} title="User" size={1.5} />)
+          ? (<Icon path={mdiWindowClose} title="close menu" size={1.5} />) 
+          : (<Icon path={mdiMenu} title="open menu" size={1.5}  />)
       }
         
       </div>
