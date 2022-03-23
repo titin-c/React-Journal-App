@@ -51,7 +51,6 @@ position: absolute;
     color: #051e34;
     cursor: pointer;
 
-    transition: all .3s ease;
 }
 .closed .journal__sidebar-burguer-icon {
     background: $secondary;
@@ -209,10 +208,15 @@ svg{opacity:.6;}
         gap: 10px;
     }
     .open .journal__sidebar-burguer-icon {
-        background: #fff;
-        color: $secondary;
-        border-radius: 6px;
-        padding: 0;
+        background: #0009;
+    border-radius: 0;
+    color: $secondary;
+    padding: 0;
+    width: calc(100vw - #{$sidebarWidth});
+    height: 100%;
+    top: 0;
+    position: absolute;
+    right: calc(-100vw + #{$sidebarWidth});
     }
 
   }

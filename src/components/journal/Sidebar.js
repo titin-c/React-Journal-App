@@ -35,16 +35,16 @@ export const Sidebar = () => {
     <aside 
       className={`journal__sidebar ${isOpen ? ('open') : ('closed')}`}
     >
-      <div
-        className='journal__sidebar-burguer-icon'
-        onClick={() => setIsOpen(!isOpen)}
-      >{
-        isOpen 
-          ? (<Icon path={mdiWindowClose} title="close menu" size={1.5} />) 
-          : (<Icon path={mdiMenu} title="open menu" size={1.5}  />)
-      }
-        
-      </div>
+        <div
+          className='journal__sidebar-burguer-icon'
+          onClick={() => setIsOpen(!isOpen)}
+        >{
+          isOpen 
+            ? (<Icon path={mdiWindowClose} title="close menu" size={1.5} />) 
+            : (<Icon path={mdiMenu} title="open menu" size={1.5}  />)
+        }
+          
+        </div>
         <div className='journal__sidebar-navbar  mb-5'>
             <h3 >
                 <Icon path={mdiAccountCircleOutline} title="User" size={1.5} />
@@ -66,9 +66,7 @@ export const Sidebar = () => {
               <small>Add a new journal entry</small>
             </div>
 
-        </div>
-
-        
+        </div>      
     </aside>
   )
 }
