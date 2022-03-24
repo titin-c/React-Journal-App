@@ -152,6 +152,7 @@ position: absolute;
     text-overflow: ellipsis;
     padding: 0px 0 0 10px;
     margin-right: 10px;
+    width: calc(100% - 82px);
 }
 .journal__entry-title{
     font-size: 14px;

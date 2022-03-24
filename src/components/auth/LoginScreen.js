@@ -4,6 +4,12 @@ import{Link} from 'react-router-dom';
 import {  startGoogleLogin, startLoginEmailPassword } from '../../actions/auth';
 import { useForm } from '../../hooks/useForm';
 
+import Icon from "@mdi/react";
+import {
+  mdiLoginVariant,
+  mdiAccountPlus
+} from "@mdi/js";
+
 export const LoginScreen = () => {
 
   const dispatch = useDispatch();
@@ -26,20 +32,20 @@ const handleGoogleLogin = ()=>{
 
   return (
     <>
-        <h1 className='auth__title mb-5'>Login</h1>
+        <h1 className='auth__title mb-5'><Icon path={mdiLoginVariant} title="Login" size={1.5} /> <span>Login</span></h1>
         <form onSubmit={handleLogin}> 
           <input 
               type="text" 
-              placeholder='Tu correo...' 
+              placeholder='Your email...' 
               name='email'
               autoComplete='off'
               className='auth__input border-bottom'
               value={email}
-              onChange={handleImputChange}
+              onChange={handleImputChange} 
           />
           <input 
               type="password" 
-              placeholder='Tu contraseña...' 
+              placeholder='Your password...' 
               name='password'
               autoComplete='off'
               className='auth__input border-bottom'
@@ -55,7 +61,7 @@ const handleGoogleLogin = ()=>{
           </button>
           <hr className='border-bottom'/>
          <div className='auth__social-networks'>
-              <p>Login con social Networks</p>
+              <p>Login with Social Networks</p>
               <div 
                     className="google-btn"
                     onClick={handleGoogleLogin}
@@ -69,7 +75,8 @@ const handleGoogleLogin = ()=>{
                 </div>
         </div>
          <Link to="/auth/register" className='link'>
-          Create New Acccount
+         <Icon path={mdiAccountPlus} title="Register" size={.8} />
+          <span>Create New Acccount</span>
          </Link>
         </form>
     </>

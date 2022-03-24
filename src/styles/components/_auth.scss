@@ -26,12 +26,14 @@
     box-shadow: 0 0 10px 0 $primary, inset 0 0 5px 0 rgba(255,255,255,.2);
     border-radius: 20px;
     padding: 40px;
-    width: 250px;
+    width: 380px;
 
 }
-.auth__title{
+.auth__title {
     margin-bottom: 50px;
-
+    display: flex;
+    align-items: center;
+    svg{margin-right: 10px;}
 }
 .auth__input{
     color:#fff;
@@ -111,14 +113,22 @@ hr{margin-top: 40px;}
 }
 
 .auth__alert-error {
-    background-color: #ff00002c;
+    background-color: rgba($danger, 0.2);
     font-size: .8em;
     border-radius: 5px;
     font-weight: bold;
-    color: #d90000;
+    color: $danger;
     justify-content: center;
     display: flex;
     padding: 5px;
     margin-bottom: 10px;
-    border: solid 1px #d90000;
+    border: solid 1px $danger;
+}
+
+@media (max-width: 800px) {
+.auth__box-container{
+    padding: 20px 20px 40px;
+    width: 250px;
+
+}
 }

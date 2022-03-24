@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { startLogout } from '../../actions/auth';
 import { JournalEntries } from './JournalEntries';
-import { startNewNote } from '../../actions/notes';
+import { handleIsOpen, startNewNote } from '../../actions/notes';
 
 
 import Icon from "@mdi/react";

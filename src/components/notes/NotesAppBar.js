@@ -29,11 +29,11 @@ const handleFileChange = (e)=>{
   return (
     <div className='notes__appbar'>
         <div className='btn-flex'>
-          <Icon path={mdiCalendarMonthOutline} title="date" size={.9} />
-          <b>28 Agosto 2020</b>
-          <input
-            id="fileSelector"
-            type="file"
+          { /*  <Icon path={mdiCalendarMonthOutline} title="date" size={.9} />
+          <b>28 Agosto 2020</b> */ }
+          <input 
+            id="fileSelector" 
+            type="file" 
             style={{display:'none'}}
             onChange={ handleFileChange}
           ></input>

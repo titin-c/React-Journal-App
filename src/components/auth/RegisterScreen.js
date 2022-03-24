@@ -7,6 +7,13 @@ import { useForm } from '../../hooks/useForm';
 import { removeError, setError } from '../../actions/ui';
 import { startRegisterWithEmailPasswordName } from '../../actions/auth';
 
+import Icon from "@mdi/react";
+import {
+  mdiAccountPlus,
+  mdiLoginVariant
+} from "@mdi/js";
+
+
 export const RegisterScreen = () => {
 
   const dispatch = useDispatch();
@@ -50,7 +57,7 @@ export const RegisterScreen = () => {
 
   return (
     <>
-        <h1 className='auth__title mb-5'>Registro</h1>
+        <h1 className='auth__title mb-5'><Icon path={mdiAccountPlus} title="Register" size={1.5} /> <span>Register</span></h1>
         <form onSubmit={handleRegister}> 
         {
           msgError &&
@@ -62,7 +69,7 @@ export const RegisterScreen = () => {
         }
         <input 
             type="text" 
-            placeholder='Tu nombre...' 
+            placeholder='Your name...' 
             name='name'
             autoComplete='off'
             className='auth__input border-bottom'
@@ -71,7 +78,7 @@ export const RegisterScreen = () => {
           />
           <input 
             type="email" 
-            placeholder='Tu correo electrónico...' 
+            placeholder='Your email...' 
             name='email'
             autoComplete='off'
             className='auth__input  border-bottom'
@@ -80,7 +87,7 @@ export const RegisterScreen = () => {
           />
           <input 
             type="password" 
-            placeholder='Tu contraseña...' 
+            placeholder='Your password...' 
             name='password'
             autoComplete='off'
             className='auth__input border-bottom mt-5'
@@ -89,7 +96,7 @@ export const RegisterScreen = () => {
           />
           <input 
             type="password" 
-            placeholder='Repite tu contraseña...' 
+            placeholder='Repeat your password...' 
             name='password2'
             autoComplete='off'
             className='auth__input border-bottom'
@@ -103,7 +110,8 @@ export const RegisterScreen = () => {
           
          
          <Link to="/auth/login" className='link'>
-          Already Registered?
+         <Icon path={mdiLoginVariant} title="Register" size={.8} />
+          <span>Already Registered?</span>
          </Link>
         </form>
     </>

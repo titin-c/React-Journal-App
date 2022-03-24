@@ -68,7 +68,7 @@ export const NoteScreen = () => {
     {
       note.url ?
         <div>
-            <p><b>Imagen destacada:</b></p>
+            <p className='flex-icon'><Icon path={mdiImage} title="Add picture" size={.8} /> <b>Featured image:</b></p>
             <img 
               src={ note.url } 
               alt={ title }/>

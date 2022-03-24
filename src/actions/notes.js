@@ -7,7 +7,7 @@ import { fileUpload } from "../helpers/fileUpload";
 
 
  // react-journal
- 
+
 export const startNewNote = () => {
   return async (dispatch, getState) => {
     const { auth: { uid }} = getState();

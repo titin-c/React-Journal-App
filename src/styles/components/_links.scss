@@ -2,6 +2,12 @@
      color:lighten($color: $terciary, $amount: 25);
      font-size:14px;
      letter-spacing: 1px;
+     display: flex;
+
+     svg{
+         margin-right: 8px;
+        opacity: .8;
+    }
      
 
      &:hover{
