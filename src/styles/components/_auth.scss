@@ -107,7 +107,8 @@ hr{margin-top: 40px;}
     display:flex;
     justify-content: left;
     margin: 20px 0;
-    column-gap: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
     
     font-size: 1rem;
 }

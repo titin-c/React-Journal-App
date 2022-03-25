@@ -46,7 +46,7 @@ position: absolute;
 }
 .journal__sidebar-burguer-icon {
     position: absolute;
-    right: -40px;
+    right: -45px;
     top: 9px;
     color: #051e34;
     cursor: pointer;
@@ -73,7 +73,8 @@ position: absolute;
     font-weight: lighter;
     display: flex;
     align-items: center;
-    column-gap: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 .journal__sidebar-navbar h3 span {
     overflow: hidden;
@@ -90,7 +91,8 @@ position: absolute;
         border-radius: 100px;
         background-color: $secondary;
         justify-content: left;
-        column-gap: 10px;
+        flex-wrap: wrap;
+        gap: 10px;
     
         transition: all .3s ease;
     &:hover{
@@ -203,9 +205,8 @@ svg{opacity:.6;}
     .notes__appbar {
        
         justify-content: flex-end !important;
-        flex-wrap: wrap;
         align-content: flex-end;
-        row-gap: 10px;
+        flex-wrap: wrap;
         gap: 10px;
     }
     .open .journal__sidebar-burguer-icon {
