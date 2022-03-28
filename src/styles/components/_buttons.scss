@@ -32,6 +32,14 @@
     flex-wrap: wrap;
     gap: 5px;
 }
+
+//safari no soporta gap... esto es un parche
+@supports not (gap: 5px) {
+    .btn-flex > * {
+      margin-right: 5px;
+    }
+  }
+
 .btn-primary{
 
     background-color: lighten($color: $primary, $amount: 15);

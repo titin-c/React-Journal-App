@@ -26,7 +26,12 @@
     form{width: 60%; height: 100%;}
     
 }
-
+    //safari no soporta gap... esto es un parche
+    @supports not (gap: 2%) {
+        .notes__content > * {
+          margin-right: 2%;
+        }
+      }
 .notes__title-input, .notes__textarea{
     border:none;
     display: block;
@@ -84,6 +89,12 @@
             width: 100%;
             height: unset;
         }
+        //safari no soporta gap... esto es un parche
+    @supports not (gap: 20px) {
+        .notes__content > * {
+          margin-right: 20px;
+        }
+      }
     }
     
     .notes__textarea, .notes__title-input {padding: 7px;}
