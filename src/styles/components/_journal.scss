@@ -73,14 +73,10 @@ position: absolute;
     font-weight: lighter;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-//safari no soporta gap... esto es un parche
-@supports not (gap: 10px) {
-    .journal__sidebar-navbar h3 > * {
-      margin-right: 10px;
     }
+
+  .journal__sidebar-navbar h3 > * + *{
+    margin-left: 10px;
   }
 .journal__sidebar-navbar h3 span {
     overflow: hidden;
@@ -97,8 +93,7 @@ position: absolute;
         border-radius: 100px;
         background-color: $secondary;
         justify-content: left;
-        flex-wrap: wrap;
-        gap: 10px;
+        
     
         transition: all .3s ease;
     &:hover{
@@ -106,11 +101,8 @@ position: absolute;
         color:$primary;
     }
 }
-//safari no soporta gap... esto es un parche
-@supports not (gap: 10px) {
-    .journal__new-entry > * {
-      margin-right: 10px;
-    }
+.journal__new-entry > * + *{
+    margin-left: 10px;
   }
 .journal__new-entry div{
     font-weight: bold;
@@ -218,16 +210,11 @@ svg{opacity:.6;}
        
         justify-content: flex-end !important;
         align-content: flex-end;
-        flex-wrap: wrap;
-        gap: 10px;
     }
 
-    //safari no soporta gap... esto es un parche
-@supports not (gap: 10px) {
-    .notes__appbar > * {
-      margin-right: 10px;
-    }
-  }
+    .notes__appbar > * + *{
+        margin-left: 10px;
+      }
     .open .journal__sidebar-burguer-icon {
         background: #0009;
     border-radius: 0;
